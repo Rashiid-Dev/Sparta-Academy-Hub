@@ -1,0 +1,18 @@
+﻿<Window x:Class="SpartaAcademyHubWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpartaAcademyHubWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1080" Width="1920">
+    <Grid>
+        <Grid>
+            <MediaElement Source="/Spartavid.mp4" Name="mePlayer" LoadedBehavior="Manual" Stretch="fill" IsMuted="True" Volume="0"  Opacity="0.6" />
+        </Grid>
+
+        <TextBlock x:Name="PrintInfo" HorizontalAlignment="Left" Margin="121,127,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="719" Width="774" FontSize="72"/>
+
+
+    </Grid>
+</Window>
