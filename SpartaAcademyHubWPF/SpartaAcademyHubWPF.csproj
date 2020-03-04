@@ -7,10 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="AcademyHubLogo.png" />
+    <None Remove="BlurryBackground.jpg" />
+    <None Remove="SpartaLogo.png" />
     <None Remove="Spartavid.mp4" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="3.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.2">
@@ -20,7 +24,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="Spartavid.mp4" />
+    <EmbeddedResource Include="Spartavid.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="AcademyHubLogo.png" />
+    <Resource Include="BlurryBackground.jpg" />
+    <Resource Include="SpartaLogo.png" />
   </ItemGroup>
 
 </Project>

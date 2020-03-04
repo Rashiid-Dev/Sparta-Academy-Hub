@@ -5,14 +5,89 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SpartaAcademyHubWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920">
+        Title="MainWindow" Height="1080" Width="1920"
+         
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"     
+         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+         TextElement.FontWeight="Regular"
+         TextElement.FontSize="13"
+         TextOptions.TextFormattingMode="Ideal"
+         TextOptions.TextRenderingMode="Auto"
+         Background="{DynamicResource MaterialDesignPaper}"
+         FontFamily="{DynamicResource MaterialDesignFont}">
+
     <Grid>
-        <Grid>
-            <MediaElement Source="/Spartavid.mp4" Name="mePlayer" LoadedBehavior="Manual" Stretch="fill" IsMuted="True" Volume="0"  Opacity="0.6" />
-        </Grid>
 
-        <TextBlock x:Name="PrintInfo" HorizontalAlignment="Left" Margin="121,127,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="719" Width="774" FontSize="72"/>
+        <MediaElement Name="mePlayer" LoadedBehavior="Manual" Stretch="fill" IsMuted="True" Volume="0" >
+            <MediaElement.BitmapEffect>
+                <BlurBitmapEffect Radius="20" />
+            </MediaElement.BitmapEffect>
+            <MediaElement.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </MediaElement.OpacityMask>
 
+        </MediaElement>
+
+
+
+
+
+
+
+
+
+        <Button
+            x:Name="WelcomeButton"
+            Width="400"
+            Height="100"
+            FontSize="30"
+            Style="{StaticResource MaterialDesignOutlinedButton}"
+            ToolTip="MaterialDesignOutlinedButton" Click="WelcomeButton_Click">
+            Click here to find out more!
+        </Button>
+
+
+        
+        
+        <Image x:Name="BlurryBackground" HorizontalAlignment="Center" Height="1080" Width="1920" VerticalAlignment="Top"  Stretch="Fill" Source="BlurryBackground.jpg" IsEnabled="False" Visibility="Hidden"/>
+        <TextBlock x:Name="PrintInfo" HorizontalAlignment="Left" Margin="604,140,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="719" Width="774" FontSize="72" Visibility="Hidden"/>
+        <Image x:Name="SpartaLogo" HorizontalAlignment="Left" Height="271" Margin="760,98,0,0" VerticalAlignment="Top" Width="360" Source="SpartaLogo.png"/>
+        <Image x:Name="AcademyLogo" HorizontalAlignment="Left" Height="367" Margin="940,98,0,0" VerticalAlignment="Top" Width="790" Source="AcademyHubLogo.png"/>
+
+        <ToolBarTray Margin="168,465,31,314" Background="{x:Null}">
+            <ToolBar
+                x:Name="Dashboard"
+    Style="{DynamicResource MaterialDesignToolBar}"
+    ClipToBounds="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="146" Width="232" Margin="682,70,0,0" Visibility="Hidden">
+                <Button
+      ToolTip="User Info"
+      Click="UserInfoButton_OnClick">
+                    <materialDesign:PackIcon
+        Kind="AccountMultipleTick" />
+                </Button>
+                <Separator />
+                <Button
+      ToolTip="Follow me on Twitter"
+      Click="Academy_OnClick">
+                    <materialDesign:PackIcon
+        Kind="AcademicCap" />
+                </Button>
+                <Separator />
+                <Button
+      ToolTip="Follow me on Twitter"
+      Click="TwitterButton_OnClick">
+                    <materialDesign:PackIcon
+        Kind="Twitter" />
+                </Button>
+                <Separator />
+
+
+
+            </ToolBar>
+        </ToolBarTray>
 
     </Grid>
 </Window>
