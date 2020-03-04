@@ -75,47 +75,6 @@ namespace SpartaAcademyHubWPF
             Weathertext.Visibility = Visibility.Visible;
         }
 
-        private void UserInfoButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            CoursesText.Visibility = Visibility.Visible;
-            p.CoursesPrint();
-            var count = 0;
-            //foreach (var makr in p.CoursesPrint())
-            //{
-                CoursesText.Text += p.CoursesPrint() + Environment.NewLine;
-                CoursesText.Text += Environment.NewLine;
-                count++;
-            //}
-            Dashboard.Visibility = Visibility.Hidden;
-            DigitalClock.Visibility = Visibility.Hidden;
-            PartlyCloudy.Visibility = Visibility.Hidden;
-            Weathertext.Visibility = Visibility.Hidden;
-            BackButton.Visibility = Visibility.Visible;
-        }
-
-        private void Academy_OnClick(object sender, RoutedEventArgs e)
-        {
-            PrintInfo.Visibility = Visibility.Visible;
-            p.AcademiesMake();
-            var count = 0;
-            foreach (var makr in p.AcademiesMake())
-            {
-                PrintInfo.Text += makr + Environment.NewLine;
-                PrintInfo.Text += Environment.NewLine;
-                count++;
-            }
-            Dashboard.Visibility = Visibility.Hidden;
-            DigitalClock.Visibility = Visibility.Hidden;
-            PartlyCloudy.Visibility = Visibility.Hidden;
-            Weathertext.Visibility = Visibility.Hidden;
-            BackButton.Visibility = Visibility.Visible;
-
-        }
-
-        private void TwitterButton_OnClick(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         public void StartClock()
         {
@@ -144,6 +103,47 @@ namespace SpartaAcademyHubWPF
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
+        }
+
+        private void Courses_Click(object sender, RoutedEventArgs e)
+        {
+            CoursesText.Visibility = Visibility.Visible;
+            p.CoursesPrint();
+            var count = 0;
+            //foreach (var makr in p.CoursesPrint())
+            //{
+            CoursesText.Text += p.CoursesPrint() + Environment.NewLine;
+            CoursesText.Text += Environment.NewLine;
+            count++;
+            //}
+            Dashboard.Visibility = Visibility.Hidden;
+            DigitalClock.Visibility = Visibility.Hidden;
+            PartlyCloudy.Visibility = Visibility.Hidden;
+            Weathertext.Visibility = Visibility.Hidden;
+            BackButton.Visibility = Visibility.Visible;
+        }
+
+        private void UserInfoButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Academies_Click(object sender, RoutedEventArgs e)
+        {
+            PrintInfo.Visibility = Visibility.Visible;
+            p.AcademiesMake();
+            var count = 0;
+            foreach (var makr in p.AcademiesMake())
+            {
+                PrintInfo.Text += makr + Environment.NewLine;
+                PrintInfo.Text += Environment.NewLine;
+                count++;
+            }
+            Dashboard.Visibility = Visibility.Hidden;
+            DigitalClock.Visibility = Visibility.Hidden;
+            PartlyCloudy.Visibility = Visibility.Hidden;
+            Weathertext.Visibility = Visibility.Hidden;
+            BackButton.Visibility = Visibility.Visible;
         }
     }
 }

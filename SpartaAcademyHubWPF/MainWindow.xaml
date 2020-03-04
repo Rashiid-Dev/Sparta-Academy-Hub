@@ -63,40 +63,8 @@
         <Image x:Name="SpartaLogo" HorizontalAlignment="Center" Height="271" Margin="0,-24,0,0" VerticalAlignment="Top" Width="360" Source="SpartaLogo.png"/>
         <Image x:Name="AcademyLogo" HorizontalAlignment="Left" Height="367" Margin="980,-46,0,0" VerticalAlignment="Top" Width="790" Source="AcademyHubLogo.png"/>
 
-        <ToolBarTray Margin="168,465,31,314" Background="{x:Null}">
-            <ToolBar
-                x:Name="Dashboard"
-    Style="{DynamicResource MaterialDesignToolBar}"
-    ClipToBounds="False" HorizontalAlignment="Left" VerticalAlignment="Top" Height="146" Width="232" Margin="682,70,0,0" Visibility="Hidden">
-                <Button
-      ToolTip="User Info"
-      Click="UserInfoButton_OnClick">
-                    <materialDesign:PackIcon
-        Kind="AccountMultipleTick" />
-                </Button>
-                <Separator />
-                <Button
-      ToolTip="Academies"
-      Click="Academy_OnClick">
-                    <materialDesign:PackIcon
-        Kind="AcademicCap" />
-                </Button>
-                <Separator />
-                <Button
-      ToolTip="Follow me on Twitter"
-      Click="TwitterButton_OnClick">
-                    <materialDesign:PackIcon
-        Kind="Twitter" />
-                </Button>
-                <Separator />
-
-
-
-
-
-            </ToolBar>
-        </ToolBarTray>
-        <TextBox x:Name="DigitalClock" HorizontalAlignment="Left" Margin="67,21,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Height="185" FontSize="72" FontFamily="Microsoft YaHei UI" Visibility="Hidden" BorderBrush="{x:Null}"/>
+    
+        <TextBox x:Name="DigitalClock" HorizontalAlignment="Left" Margin="67,21,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Height="185" FontSize="72" FontFamily="Microsoft YaHei UI" Visibility="Hidden" BorderBrush="{x:Null}" Foreground="White"/>
         <Image x:Name="PartlyCloudy" HorizontalAlignment="Left" Height="168" Margin="1744,-8,0,0" VerticalAlignment="Top" Width="145" Source="partly_cloudy.png" Visibility="Hidden"/>
         <TextBox x:Name="Weathertext" HorizontalAlignment="Left" Margin="1729,114,0,0" Text="1C ¦ Partly Cloudy" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="58" FontSize="20" Visibility="Hidden" BorderBrush="{x:Null}"/>
         <TextBox x:Name="CoursesText" HorizontalAlignment="Left" Margin="67,86,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="1782" BorderBrush="{x:Null}" FontSize="72" Height="876" Visibility="Hidden"/>
@@ -110,6 +78,61 @@
           x:Name="PowerButton"
           Content="{materialDesign:PackIcon Power}"
           ToolTip="Close" Margin="131,930,1700,0" Click="Button_Click" VerticalAlignment="Top" />
+
+        <!--Dashboard buttons-->
+        <Grid x:Name="Dashboard" Visibility="Hidden">
+        <Button
+            x:Name="UserInfoButton"
+  Style="{StaticResource MaterialDesignFloatingActionAccentButton}"
+  ToolTip="Acount Manager" Margin="590,496,1274,512" Click="UserInfoButton_Click">
+            <materialDesign:PackIcon
+        Kind="AccountEditOutline"
+        Height="44"
+        Width="56" 
+        />
+        </Button>
+        
+        <Button
+            x:Name="Academies"
+  Style="{StaticResource MaterialDesignFloatingActionAccentButton}"
+  ToolTip="Academies" Margin="760,496,1104,512" Click="Academies_Click">
+            <materialDesign:PackIcon
+    Kind="AcademicCap"
+    Height="45"
+    Width="46" 
+               />
+        </Button>
+
+        <Button
+            x:Name="Courses"
+  Style="{StaticResource MaterialDesignFloatingActionAccentButton}"
+  ToolTip="Courses" Margin="932,496,932,512" Click="Courses_Click">
+            <materialDesign:PackIcon
+    Kind="BookOpen"
+    Height="38"
+    Width="46" />
+        </Button>
+
+        <Button
+            x:Name="People"
+  Style="{StaticResource MaterialDesignFloatingActionAccentButton}"
+  ToolTip="People" Margin="1104,496,760,512">
+            <materialDesign:PackIcon
+    Kind="PeopleGroup"
+    Height="45"
+    Width="40" />
+        </Button>
+
+        <Button
+            x:Name="Calendar"
+  Style="{StaticResource MaterialDesignFloatingActionAccentButton}"
+  ToolTip="Calender" Margin="1291,496,573,512">
+            <materialDesign:PackIcon
+    Kind="CalendarMonth"
+    Height="45"
+    Width="46" />
+        </Button>
+        </Grid>
 
 
     </Grid>
