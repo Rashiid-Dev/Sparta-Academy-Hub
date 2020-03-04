@@ -9,11 +9,15 @@
   <ItemGroup>
     <None Remove="AcademyHubLogo.png" />
     <None Remove="BlurryBackground.jpg" />
+    <None Remove="partly_cloudy.png" />
     <None Remove="SpartaLogo.png" />
     <None Remove="Spartavid.mp4" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="3.3.0" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="3.3.0" />
+    <PackageReference Include="MaterialDesignColors" Version="1.2.2" />
     <PackageReference Include="MaterialDesignThemes" Version="3.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
@@ -32,6 +36,7 @@
   <ItemGroup>
     <Resource Include="AcademyHubLogo.png" />
     <Resource Include="BlurryBackground.jpg" />
+    <Resource Include="partly_cloudy.png" />
     <Resource Include="SpartaLogo.png" />
   </ItemGroup>
 

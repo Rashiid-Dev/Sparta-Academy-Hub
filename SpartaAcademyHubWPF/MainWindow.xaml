@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:SpartaAcademyHubWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="1080" Width="1920"
+        WindowStyle="None"
+        WindowState="Maximized"
+        
          
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"     
          TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -44,18 +47,21 @@
             Width="400"
             Height="100"
             FontSize="30"
-            Style="{StaticResource MaterialDesignOutlinedButton}"
-            ToolTip="MaterialDesignOutlinedButton" Click="WelcomeButton_Click">
+            Style="{StaticResource MaterialDesignRaisedAccentButton}"
+            ToolTip="Resource name: MaterialDesignRaisedAccentButton" Click="WelcomeButton_Click" Background="#FF8C6AFF"
+            materialDesign:RippleAssist.Feedback="#DD000000">
             Click here to find out more!
+
         </Button>
 
 
-        
-        
+
+
         <Image x:Name="BlurryBackground" HorizontalAlignment="Center" Height="1080" Width="1920" VerticalAlignment="Top"  Stretch="Fill" Source="BlurryBackground.jpg" IsEnabled="False" Visibility="Hidden"/>
-        <TextBlock x:Name="PrintInfo" HorizontalAlignment="Left" Margin="604,140,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="719" Width="774" FontSize="72" Visibility="Hidden"/>
-        <Image x:Name="SpartaLogo" HorizontalAlignment="Left" Height="271" Margin="760,98,0,0" VerticalAlignment="Top" Width="360" Source="SpartaLogo.png"/>
-        <Image x:Name="AcademyLogo" HorizontalAlignment="Left" Height="367" Margin="940,98,0,0" VerticalAlignment="Top" Width="790" Source="AcademyHubLogo.png"/>
+
+        <TextBlock x:Name="PrintInfo" HorizontalAlignment="Center" Margin="604,140,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Height="719" Width="774" FontSize="72" Visibility="Hidden" Foreground="Black"/>
+        <Image x:Name="SpartaLogo" HorizontalAlignment="Center" Height="271" Margin="0,-24,0,0" VerticalAlignment="Top" Width="360" Source="SpartaLogo.png"/>
+        <Image x:Name="AcademyLogo" HorizontalAlignment="Left" Height="367" Margin="980,-46,0,0" VerticalAlignment="Top" Width="790" Source="AcademyHubLogo.png"/>
 
         <ToolBarTray Margin="168,465,31,314" Background="{x:Null}">
             <ToolBar
@@ -70,7 +76,7 @@
                 </Button>
                 <Separator />
                 <Button
-      ToolTip="Follow me on Twitter"
+      ToolTip="Academies"
       Click="Academy_OnClick">
                     <materialDesign:PackIcon
         Kind="AcademicCap" />
@@ -86,8 +92,25 @@
 
 
 
+
+
             </ToolBar>
         </ToolBarTray>
+        <TextBox x:Name="DigitalClock" HorizontalAlignment="Left" Margin="67,21,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Height="185" FontSize="72" FontFamily="Microsoft YaHei UI" Visibility="Hidden" BorderBrush="{x:Null}"/>
+        <Image x:Name="PartlyCloudy" HorizontalAlignment="Left" Height="168" Margin="1744,-8,0,0" VerticalAlignment="Top" Width="145" Source="partly_cloudy.png" Visibility="Hidden"/>
+        <TextBox x:Name="Weathertext" HorizontalAlignment="Left" Margin="1729,114,0,0" Text="1C ¦ Partly Cloudy" TextWrapping="Wrap" VerticalAlignment="Top" Width="160" Height="58" FontSize="20" Visibility="Hidden" BorderBrush="{x:Null}"/>
+        <TextBox x:Name="CoursesText" HorizontalAlignment="Left" Margin="67,86,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="1782" BorderBrush="{x:Null}" FontSize="72" Height="876" Visibility="Hidden"/>
+        <Button
+            x:Name="BackButton"
+            Click="BackButton_OnClick" Margin="144,33,1700,1000" Background="Black" Visibility="Hidden" Opacity="1">
+            <materialDesign:PackIcon
+            Kind="Backburger" Height="22" Width="38" HorizontalAlignment="Center" />
+        </Button>
+        <Button
+          x:Name="PowerButton"
+          Content="{materialDesign:PackIcon Power}"
+          ToolTip="Close" Margin="131,930,1700,0" Click="Button_Click" VerticalAlignment="Top" />
+
 
     </Grid>
 </Window>
