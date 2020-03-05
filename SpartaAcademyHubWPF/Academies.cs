@@ -7,6 +7,7 @@ namespace SpartaAcademyHubWPF
     {
         public Academies()
         {
+            Accounts = new HashSet<Accounts>();
             Courses = new HashSet<Courses>();
         }
 
@@ -15,6 +16,7 @@ namespace SpartaAcademyHubWPF
         public int? LocationId { get; set; }
 
         public virtual Locations Location { get; set; }
+        public virtual ICollection<Accounts> Accounts { get; set; }
         public virtual ICollection<Courses> Courses { get; set; }
     }
 }

@@ -43,8 +43,8 @@ namespace SpartaAcademyHubWPF
                 PrintInfo.Text += Environment.NewLine;
                 count++;
             }
-            
-            
+
+
 
         }
 

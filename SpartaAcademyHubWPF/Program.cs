@@ -11,9 +11,10 @@ namespace SpartaAcademyHubWPF
     {
         public string CoursesPrint()
         {
+
             using (var db = new AcademyHubContext())
             {
-      
+
 
                 var JoinQuery =
                 //from order in db.Orders.Include(o => o.Customer)
@@ -21,7 +22,7 @@ namespace SpartaAcademyHubWPF
                 //select order;
                 from Courses in db.Courses.Include(o => o.Academy)
                 select Courses;
-                
+
 
                 foreach (var course in JoinQuery)
                 {
@@ -33,10 +34,10 @@ namespace SpartaAcademyHubWPF
                     {
                         return $"Course name is {course.Coursename} and it takes {course.Duration} weeks to complete and it takes place at {course.Academy.Academyname}";
                     }
-                    
+
                 }
                 return "";
-               
+
             }
         }
         public List<string> AcadList = new List<string>();
@@ -45,13 +46,13 @@ namespace SpartaAcademyHubWPF
             using (var db = new AcademyHubContext())
             {
 
-                
+
                 var AcademyQuery =
                 //from order in db.Orders.Include(o => o.Customer)
                 //where order.Freight > 750
                 //select order;
                 (from Academies in db.Academies
-                select Academies.Academyname).ToList();
+                 select Academies.Academyname).ToList();
 
                 //foreach (var academies in AcademyQuery)
                 //{
@@ -74,5 +75,6 @@ namespace SpartaAcademyHubWPF
             }
             return "";
         }
+    
     }
 }
