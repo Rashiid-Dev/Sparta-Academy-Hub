@@ -32,12 +32,19 @@
 
 
             <StackPanel VerticalAlignment="Center">
-                <Image Source="AcademyHubLogo.png" Width="142" Height="108"/>
+                <Image Source="AcademyHubLogo.png" Width="142" Height="82"/>
                 <TextBlock Text="Login"
                           FontWeight="Light"
                           FontFamily="helvetica"
                           FontSize="22"
                           Foreground="White"
+                          HorizontalAlignment="Center"/>
+                <TextBlock
+                          x:Name="RightOrWrong"
+                          FontWeight="Light"
+                          FontFamily="helvetica"
+                          FontSize="22"
+                          Foreground="Red"
                           HorizontalAlignment="Center"/>
             </StackPanel>
 
@@ -45,10 +52,11 @@
 
             <StackPanel Grid.Row="1" >
                 <StackPanel Orientation="Horizontal">
-                    <TextBox x:Name="UsernameText"
+                    <TextBox Text="{Binding Path=selectedusername, Mode=TwoWay,UpdateSourceTrigger=LostFocus}"
+                             x:Name="UsernameText"
                              FontFamily="Helvetica"
                             FontWeight="Light"
-                            Text="Username"
+                            
                             FontSize="20"
                             HorizontalAlignment="Center"
                             Foreground="White"
@@ -72,10 +80,10 @@
 
 
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                    <PasswordBox x:Name="PasswordText" 
-                            FontFamily="Helvetica"
+                    <TextBox x:Name="PasswordText" 
+                             FontFamily="Helvetica"
                             FontWeight="Light"
-                            Password="Password"
+                            Text="{Binding Path=selecteduserpass, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"
                             FontSize="20"
                             HorizontalAlignment="Center"
                             Foreground="White"

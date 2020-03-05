@@ -43,7 +43,7 @@
                 <EllipseGeometry Center="90,90" RadiusX="400" RadiusY="400" />
             </Grid.Clip>
         </Grid>
-        <Button x:Name="BirminghamButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="1025" Width="1144" Click="BirminghamButtonClick" Background="{x:Null}"/>
+        <Button x:Name="BirminghamButton" HorizontalAlignment="Left" VerticalAlignment="Top" Height="1025" Width="1144" Click="BirminghamButtonClick" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}"/>
         <Image x:Name="BlurryBackground" Source="BlurryBackground.jpg" Stretch="Fill" Visibility="Hidden"/>
         <TextBlock x:Name="PrintInfo" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Height="353" Width="377" FontSize="36" Margin="0,71,0,0" Visibility="Hidden"/>
         <Button x:Name="BackToDashBoardB"
