@@ -72,9 +72,11 @@ namespace SpartaAcademyHubWPF
             foreach (var acads in AcadList)
             {
                 return acads;
+
+
             }
             return "";
+
         }
-    
-    }
+    }    
 }

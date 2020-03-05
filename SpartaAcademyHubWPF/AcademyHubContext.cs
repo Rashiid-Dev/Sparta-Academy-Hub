@@ -26,7 +26,7 @@ namespace SpartaAcademyHubWPF
         {
             if (!optionsBuilder.IsConfigured)
             {
-
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Data Source = localhost; Initial Catalog = AcademyHub; Persist Security Info = True; User ID = SA; Password = Passw0rd2018");
             }
         }
@@ -54,10 +54,12 @@ namespace SpartaAcademyHubWPF
 
             modelBuilder.Entity<Accounts>(entity =>
             {
-                entity.HasKey(e => e.AccountId)
-                    .HasName("PK__Accounts__349DA58692F1FD5D");
+                entity.HasKey(e => e.UserName)
+                    .HasName("PK__Accounts__C9F2845709875340");
 
-                entity.Property(e => e.AccountId).HasColumnName("AccountID");
+                entity.Property(e => e.UserName)
+                    .HasMaxLength(30)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.AcademyId).HasColumnName("AcademyID");
 
@@ -81,32 +83,49 @@ namespace SpartaAcademyHubWPF
                     .HasMaxLength(40)
                     .IsUnicode(false);
 
+                entity.Property(e => e.UserPass)
+                    .IsRequired()
+                    .HasMaxLength(30)
+                    .IsUnicode(false);
+
                 entity.HasOne(d => d.Academy)
                     .WithMany(p => p.Accounts)
                     .HasForeignKey(d => d.AcademyId)
-                    .HasConstraintName("FK__Accounts__Academ__4F7CD00D");
+                    .HasConstraintName("FK__Accounts__Academ__5629CD9C");
 
                 entity.HasOne(d => d.Course)
                     .WithMany(p => p.Accounts)
                     .HasForeignKey(d => d.CourseId)
-                    .HasConstraintName("FK__Accounts__Course__5070F446");
+                    .HasConstraintName("FK__Accounts__Course__571DF1D5");
             });
 
             modelBuilder.Entity<Connections>(entity =>
             {
-                entity.HasNoKey();
+                entity.HasKey(e => e.ConnectionId)
+                    .HasName("PK__Connecti__404A64F3112BC5B3");
 
-                entity.Property(e => e.AccountId).HasColumnName("AccountID");
+                entity.Property(e => e.ConnectionId)
+                    .HasColumnName("ConnectionID")
+                    .ValueGeneratedNever();
+
+                entity.Property(e => e.AccountId)
+                    .HasColumnName("AccountID")
+                    .HasMaxLength(30)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ConnectedTo)
+                    .HasMaxLength(30)
+                    .IsUnicode(false);
 
                 entity.HasOne(d => d.Account)
                     .WithMany(p => p.ConnectionsAccount)
                     .HasForeignKey(d => d.AccountId)
-                    .HasConstraintName("FK__Connectio__Accou__52593CB8");
+                    .HasConstraintName("FK__Connectio__Accou__5AEE82B9");
 
                 entity.HasOne(d => d.ConnectedToNavigation)
                     .WithMany(p => p.ConnectionsConnectedToNavigation)
                     .HasForeignKey(d => d.ConnectedTo)
-                    .HasConstraintName("FK__Connectio__Conne__534D60F1");
+                    .HasConstraintName("FK__Connectio__Conne__5BE2A6F2");
             });
 
             modelBuilder.Entity<Courses>(entity =>

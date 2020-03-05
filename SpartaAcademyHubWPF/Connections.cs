@@ -5,8 +5,9 @@ namespace SpartaAcademyHubWPF
 {
     public partial class Connections
     {
-        public int? AccountId { get; set; }
-        public int? ConnectedTo { get; set; }
+        public string AccountId { get; set; }
+        public string ConnectedTo { get; set; }
+        public int ConnectionId { get; set; }
 
         public virtual Accounts Account { get; set; }
         public virtual Accounts ConnectedToNavigation { get; set; }
