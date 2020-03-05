@@ -1,0 +1,20 @@
+﻿<Window x:Class="SpartaAcademyHubWPF.CalendarWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpartaAcademyHubWPF"
+        mc:Ignorable="d"
+        Title="CalendarWindow" Height="1080" Width="1920"
+        WindowStyle="None"
+        WindowState="Maximized">
+    <Grid>
+        <Image HorizontalAlignment="Center" Height="1142" VerticalAlignment="Center" Width="2022" Stretch="Fill" Source="BlurryBackground.jpg"/>
+        <Calendar HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="BackToDashboard"
+    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+    ToolTip="BackToDashboard" Margin="128,115,1626,917" Click="BackToDashboard_Click">
+            Back to dashboard
+        </Button>
+    </Grid>
+</Window>

@@ -130,20 +130,40 @@ namespace SpartaAcademyHubWPF
 
         private void Academies_Click(object sender, RoutedEventArgs e)
         {
-            PrintInfo.Visibility = Visibility.Visible;
-            p.AcademiesMake();
-            var count = 0;
-            foreach (var makr in p.AcademiesMake())
-            {
-                PrintInfo.Text += makr + Environment.NewLine;
-                PrintInfo.Text += Environment.NewLine;
-                count++;
-            }
-            Dashboard.Visibility = Visibility.Hidden;
-            DigitalClock.Visibility = Visibility.Hidden;
-            PartlyCloudy.Visibility = Visibility.Hidden;
-            Weathertext.Visibility = Visibility.Hidden;
-            BackButton.Visibility = Visibility.Visible;
+        //    PrintInfo.Visibility = Visibility.Visible;
+        //    p.AcademiesMake();
+        //    var count = 0;
+        //    foreach (var makr in p.AcademiesMake())
+        //    {
+        //        PrintInfo.Text += makr + Environment.NewLine;
+        //        PrintInfo.Text += Environment.NewLine;
+        //        count++;
+        //    }
+        //    Dashboard.Visibility = Visibility.Hidden;
+        //    DigitalClock.Visibility = Visibility.Hidden;
+        //    PartlyCloudy.Visibility = Visibility.Hidden;
+        //    Weathertext.Visibility = Visibility.Hidden;
+        //    BackButton.Visibility = Visibility.Visible;
+
+        Window AcadWindow = new Window1();
+        Window oldWindow = new MainWindow();
+            oldWindow.Close();
+        AcadWindow.Show();
+        AcadWindow.Owner = this;
+        }
+
+        private void Calendar_Click(object sender, RoutedEventArgs e)
+        {
+            Window CalendWindow = new CalendarWindow();
+            Window oldWindow = new MainWindow();
+            oldWindow.Close();
+            CalendWindow.Show();
+            CalendWindow.Owner = this;
+        }
+
+        private void People_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
