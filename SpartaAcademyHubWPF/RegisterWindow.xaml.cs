@@ -43,7 +43,7 @@ namespace SpartaAcademyHubWPF
                  select account).ToList();
             }
                 
-
+                // Takes all the values from the textboxes and writes them to the database
                 foreach (var logins in RegisterQuery)
                 {
                     if (userUsername == logins.UserName)
@@ -56,6 +56,7 @@ namespace SpartaAcademyHubWPF
                     {
                         if(userPassword == userPasswordCheck)
                         {
+                            //Sets Middlenames to null if if was left as it is
                             if(userMiddlename == "Middlenames")
                             {
                                 Accounts InsertRegData = new Accounts();

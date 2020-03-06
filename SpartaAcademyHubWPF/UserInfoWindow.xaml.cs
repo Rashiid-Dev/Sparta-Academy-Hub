@@ -9,39 +9,34 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using System.Linq;
 
 namespace SpartaAcademyHubWPF
 {
-    
     /// <summary>
-    /// Interaction logic for CoursesWindow.xaml
+    /// Interaction logic for UserInfoWindow.xaml
     /// </summary>
-    public partial class CoursesWindow : Window
+    public partial class UserInfoWindow : Window
     {
-        Program pr = new Program();
-        public CoursesWindow()
+        Login LW = new Login();
+        public UserInfoWindow()
         {
             InitializeComponent();
+            
         }
 
         private void BackToDashBoardButton(object sender, RoutedEventArgs e)
         {
-            Window CourseWindow = new CoursesWindow();
+            Window UserInfWindow = new UserInfoWindow();
             Window oldWindow = new MainWindow();
             this.Close();
+            //oldWindow.Show();
             ((MainWindow)this.Owner).LoginButtonClicked();
         }
 
-        private void TakeToSDETCourses_Click(object sender, RoutedEventArgs e)
+        private void EditUserInfoButton(object sender, RoutedEventArgs e)
         {
-            CoursesCardsGrid.Visibility = Visibility.Hidden;
-            {
-                foreach(var readCourse in pr.CoursesPrint())
-                {
-                    ListOfCourses.Items.Add(readCourse);
-                }
-            }
+           // var UserName = LW.StoredUserName;
+           // UserInfoTextBlock.Text = UserName;
         }
     }
 }

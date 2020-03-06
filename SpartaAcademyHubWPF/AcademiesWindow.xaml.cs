@@ -53,7 +53,6 @@ namespace SpartaAcademyHubWPF
             Window AcadWindow = new Window1();
             Window oldWindow = new MainWindow();
             this.Close();
-            //oldWindow.Show();
             ((MainWindow)this.Owner).LoginButtonClicked();
         }
     }

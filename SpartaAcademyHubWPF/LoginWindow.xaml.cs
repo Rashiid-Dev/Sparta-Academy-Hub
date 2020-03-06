@@ -28,13 +28,14 @@ namespace SpartaAcademyHubWPF
             
 
         }
-
+        //public string StoredUserName { get { return ReturnStoredName; } set { ReturnStoredName = value; } }
+        //public string ReturnStoredName;
         private void LoginButton(object sender, RoutedEventArgs e)
         {
            
             var userLogin = UsernameText.Text;
             var userPassword = PasswordText.Password;
-
+            //StoredUserName = UsernameText.Text;
             using (var db = new AcademyHubContext())
             {
                 

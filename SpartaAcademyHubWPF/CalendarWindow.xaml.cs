@@ -27,7 +27,6 @@ namespace SpartaAcademyHubWPF
             Window CalendWindow = new CalendarWindow();
             Window oldWindow = new MainWindow();
             this.Close();
-            //oldWindow.Show();
             ((MainWindow)this.Owner).LoginButtonClicked();
         }
     }

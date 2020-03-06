@@ -30,34 +30,20 @@ namespace SpartaAcademyHubWPF
         Program p = new Program();
         public MainWindow()
         {
-            //p.AcademiesMake();
+           
             InitializeComponent();
             mePlayer.Source = new Uri(@"C:\Users\TECH-W150birm\source\repos\SpartaAcademyHubWPFApp\SpartaAcademyHubWPF\Spartavid.mp4");
             mePlayer.Play();
             StartClock();
-
-            //var count = 0;
-            //foreach (var makr in p.AcademiesMake())
-            //{
-            //    PrintInfo.Text += makr + Environment.NewLine;
-            //    count++;
-            //}
-
 
 
         }
 
         private void WelcomeButton_Click(object sender, RoutedEventArgs e)
         {
-            //mePlayer.Close();
+
             WelcomeButton.Visibility = Visibility.Hidden;
-            //BlurryBackground.Visibility = Visibility.Visible;
-            //SpartaLogo.Visibility = Visibility.Hidden;
             AcademyLogo.Visibility = Visibility.Hidden;
-            //Dashboard.Visibility = Visibility.Visible;
-            //DigitalClock.Visibility = Visibility.Visible;
-            //PartlyCloudy.Visibility = Visibility.Visible;
-            //Weathertext.Visibility = Visibility.Visible;
             Window LoginWindow = new Login();
             LoginWindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
             LoginWindow.Show();
@@ -100,6 +86,7 @@ namespace SpartaAcademyHubWPF
             CoursesText.Visibility = Visibility.Hidden;
         }
 
+        // Off button
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             System.Windows.Application.Current.Shutdown();
@@ -121,7 +108,11 @@ namespace SpartaAcademyHubWPF
 
         private void UserInfoButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Window UserInfWindow = new UserInfoWindow();
+            Window oldWindow = new MainWindow();
+            this.Close();
+            UserInfWindow.Show();
+            //UserInfWindow.Owner = this;
         }
 
         private void Academies_Click(object sender, RoutedEventArgs e)
