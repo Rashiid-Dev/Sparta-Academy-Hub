@@ -13,6 +13,11 @@
 
         <Image HorizontalAlignment="Center" Height="1192" VerticalAlignment="Center" Width="1920" Source="BlurryBackground.jpg" Stretch="Fill"/>
 
+        <ListBox x:Name="ListOfCourses" 
+         IsEnabled="{Binding IsChecked, ElementName=EnableListBox}" Margin="10,108,0,62" FontSize="48">
+
+        </ListBox>
+
         <Grid x:Name="CoursesCardsGrid" Visibility="Visible">
             <materialDesign:Card Margin="168,189,1422,189">
                 <Grid x:Name="CSharpSDET">
@@ -521,10 +526,6 @@ Utilising agile methodologies – scrum, stand-ups, user stories and working in 
 
         </Grid>
 
-        <ListBox x:Name="ListOfCourses"
-  IsEnabled="{Binding IsChecked, ElementName=EnableListBox}" Margin="142,108,150,62" FontSize="48">
-
-        </ListBox>
         
         <Button x:Name="BackToDashBoardB"
     Style="{StaticResource MaterialDesignRaisedDarkButton}"

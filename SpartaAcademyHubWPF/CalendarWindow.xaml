@@ -10,11 +10,14 @@
         WindowState="Maximized">
     <Grid>
         <Image HorizontalAlignment="Center" Height="1142" VerticalAlignment="Center" Width="2022" Stretch="Fill" Source="BlurryBackground.jpg"/>
-        <Calendar HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Calendar HorizontalAlignment="Center" VerticalAlignment="Center"
+                   SelectionMode="{Binding Path=startingdates, Mode=TwoWay,UpdateSourceTrigger=Default}"/>
         <Button x:Name="BackToDashboard"
     Style="{StaticResource MaterialDesignRaisedDarkButton}"
     ToolTip="BackToDashboard" Margin="128,115,1626,917" Click="BackToDashboard_Click">
             Back to dashboard
         </Button>
+
+
     </Grid>
 </Window>

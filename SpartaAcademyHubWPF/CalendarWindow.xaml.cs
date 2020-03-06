@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Linq;
 
 namespace SpartaAcademyHubWPF
 {
@@ -20,8 +21,16 @@ namespace SpartaAcademyHubWPF
         public CalendarWindow()
         {
             InitializeComponent();
-        }
+            using (var db = new AcademyHubContext())
+            {
+                var CalendarQuery =
+                from coursedates in db.Courses
+                select coursedates.StartDate;
 
+                var startingdates = CalendarQuery;
+            }
+
+        }
         private void BackToDashboard_Click(object sender, RoutedEventArgs e)
         {
             Window CalendWindow = new CalendarWindow();
