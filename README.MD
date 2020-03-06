@@ -120,9 +120,14 @@ Sprint Goal: Create Registration,Add, User Info, Add courses, expand peopleWindo
 - Create Academies(Slightly improved buttons but nothing further)
 - Create Connections(Nothing further added)
 
+#### UnitTests
+- Write UnitTests for CoursesPrint()
+- Write UnitTests for AcademiesMake()
+
 #### What went well and didn't
 When creating the registration, I ran into many issues when writing to the database and data binding in Xaml.
 Creating the windows went well.
+Creating UnitTests went well.
 
 ## To Run
 
