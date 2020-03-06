@@ -6,6 +6,124 @@
 
 this app is a hub where potential and current Spartans can learn more about the academy and connect
 
+## Project Goal
+To build a function app that supports user authentication, has the ability for new or potential spartans to learn more about Sparta,find out about ongoing courses and connect with other students.
+
+## Sprints
+
+### Sprint-1
+Sprint Goal: Setup a basic database, entityframework app and wpf gui
+#### Planning:
+- Create a simple ERD (Done)
+- Create a Jira kanban board and fill the backlog(Done)(Shared with Cathy and Nish on spartaglobal emails)
+- Do some more research on Linq and Entity Framework(Done)
+
+#### What went well and didn't
+The planning went well, however as I realised later on the project scope was too large for such a limited time frame.
+
+### Sprint-2
+Sprint Goal: Setup a basic database, entityframework app,wpf gui and setup github repo and commit when ready, create a basic dashboard for a minimal viable product for standup and add a welcome screen, Login Functionality
+####Database:
+- Create a simple ERD (Done)
+- Use that ERD to create a database via SSM (Done)
+- populate the database (Done)
+
+#### Entity Framework:
+- integrate the database with entityframework (Done)
+
+#### WPF GUI:
+- Create a WPF project (Done)
+- Scaffold the Database code (Done)
+- Create some GUI to interact with it (Done)
+
+#### Welcome Screen
+- Add a background video
+- Add sparta logo
+- Add a button to take you to the dashboard
+
+##### Dashboard:
+- Very basic dashboard with little to none functionality(Done)
+
+##### Login Functionality:
+- Create Login screen(Done)
+- Read data from the login screen(Not done)
+- Interact with the database to check the account(Not done)
+
+#### Github
+- Create github Repo
+- Push Initial Commit
+
+#### What went well and didn't
+Creating the database went well,
+Creating the WPF app went well,
+Creating the Welcome Screen worked
+Creating the dashboard went well.
+Scaffolding the databases had issues, due to me not knowing that error's prevent the database from scaffolding because they were not showing up in the error log. I had to clean the solution and rebuild for them to show.
+
+### Sprint-3
+Sprint Goal: Create a better dashboard, A login functionality, Registration, Tabs/Windows for User Info,Courses,Academies,Connections.
+#### Login Functionality:
+- Read data from the values entered (Done)
+- Use that data to interact with the database(Done)
+- Allow access upon succesfull authentication(Done)
+
+#### Windows
+- Create User Info(Not Done)
+- Create Courses(Very basic)
+- Create Academies(Very Basic)
+- Create Connections(Not Done)
+
+#### Create a better dashboard
+- Add clock(Done)
+- Better buttons (Done)
+
+#### Registration
+- Create a registration window (Not Done)
+- Read the values and save them to variables(Not done)
+- Write those values to the database(Not done)
+
+#### What went well and didn't
+Creating Windows went well
+Creating Dashboard went well
+Creating login functionality caused many issues as I had to do a lot of research on how to implement it and succesfully integrate it with my application.
+
+### Sprint-4
+Sprint Goal: Create Registration, Tabs/Windows for User Info,Courses,Academies,Connections.
+
+#### Create Registration:
+-Create a registration window(Done)
+- Read the values and save them to variables(Not done)
+- Write those values to the database(Not done)
+
+#### Windows
+- Create User Info(Not Done)
+- Create Courses(Nothing added)
+- Create Academies(Slightly improved)
+- Create Connections(Somewhat done, it queries the accounts from the database)
+
+#### What went well and didn't
+Tried to add tables to the database and rescaffold it by using the force command but that removed all my other tables and only left the ones I had specified in the command. I had to delete all data regarding the database and rescaffold it.
+I was not able to fully implement the registration as I had problems using Linq to capture that data and write it to the database.
+Connections was implemented but it does not check the current user.
+
+### Sprint-5
+Sprint Goal: Create Registration,Add, User Info, Add courses, expand peopleWindow and write UnitTests.
+
+#### Create Registration:
+- Read the values and save them to variables(Done)
+- Write those values to the database(Done)
+- Grant access to the dashboard
+
+#### Windows
+- Create User Info(Not Done)
+- Create Courses(Added simple listbox queried from the database)
+- Create Academies(Slightly improved buttons but nothing further)
+- Create Connections(Nothing further added)
+
+#### What went well and didn't
+When creating the registration, I ran into many issues when writing to the database and data binding in Xaml.
+Creating the windows went well.
+
 ## To Run
 
 ### You will need:
