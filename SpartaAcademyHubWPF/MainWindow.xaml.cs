@@ -107,20 +107,16 @@ namespace SpartaAcademyHubWPF
 
         private void Courses_Click(object sender, RoutedEventArgs e)
         {
-            CoursesText.Visibility = Visibility.Visible;
-            p.CoursesPrint();
-            var count = 0;
+ 
             //foreach (var makr in p.CoursesPrint())
             //{
-            CoursesText.Text += p.CoursesPrint() + Environment.NewLine;
-            CoursesText.Text += Environment.NewLine;
-            count++;
+            
             //}
-            Dashboard.Visibility = Visibility.Hidden;
-            DigitalClock.Visibility = Visibility.Hidden;
-            PartlyCloudy.Visibility = Visibility.Hidden;
-            Weathertext.Visibility = Visibility.Hidden;
-            BackButton.Visibility = Visibility.Visible;
+            Window CourseWindow = new CoursesWindow();
+            Window oldWindow = new MainWindow();
+            oldWindow.Close();
+            CourseWindow.Show();
+            CourseWindow.Owner = this;
         }
 
         private void UserInfoButton_Click(object sender, RoutedEventArgs e)

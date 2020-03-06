@@ -9,7 +9,7 @@ namespace SpartaAcademyHubWPF
 {
     class Program
     {
-        public string CoursesPrint()
+        public List<string> CoursesPrint()
         {
 
             using (var db = new AcademyHubContext())
@@ -17,26 +17,24 @@ namespace SpartaAcademyHubWPF
 
 
                 var JoinQuery =
-                //from order in db.Orders.Include(o => o.Customer)
-                //where order.Freight > 750
-                //select order;
-                from Courses in db.Courses.Include(o => o.Academy)
-                select Courses;
+                (from Courses in db.Courses.Include(o => o.Academy)
+                 where Courses.Academy.Academyname == "Birmingham Academy"
+                 select Courses.Coursename + " Course will take place at " + Courses.Academy.Academyname + " and it will take " + Courses.Duration + " week to complete.").ToList();
 
 
-                foreach (var course in JoinQuery)
-                {
-                    if (course.Duration <= 1)
-                    {
-                        return $"Course name is {course.Coursename} and it takes {course.Duration} week to complete and it takes place at {course.Academy.Academyname}";
-                    }
-                    else
-                    {
-                        return $"Course name is {course.Coursename} and it takes {course.Duration} weeks to complete and it takes place at {course.Academy.Academyname}";
-                    }
+                //foreach (var course in JoinQuery)
+                //{
+                //    if (course.Duration <= 1)
+                //    {
+                //        return $"Course name is {course.Coursename} and it takes {course.Duration} week to complete and it takes place at {course.Academy.Academyname}");
+                //    }
+                //    else
+                //    {
+                //        return $"Course name is {course.Coursename} and it takes {course.Duration} weeks to complete and it takes place at {course.Academy.Academyname}";
+                //    }
 
-                }
-                return "";
+                //}
+                return JoinQuery;
 
             }
         }

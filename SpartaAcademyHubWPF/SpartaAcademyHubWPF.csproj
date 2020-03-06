@@ -8,9 +8,13 @@
 
   <ItemGroup>
     <None Remove="AcademyHubLogo.png" />
+    <None Remove="BAImage.jpg" />
     <None Remove="BirminghamImage.jpg" />
     <None Remove="BirminghamImageLarger.jpg" />
     <None Remove="BlurryBackground.jpg" />
+    <None Remove="CSharpSDET.jpg" />
+    <None Remove="DataAnalyst.jpg" />
+    <None Remove="DataEngineer.jpg" />
     <None Remove="LondonImage.jpg" />
     <None Remove="partly_cloudy.png" />
     <None Remove="SpartaLogo.png" />
@@ -38,9 +42,13 @@
 
   <ItemGroup>
     <Resource Include="AcademyHubLogo.png" />
+    <Resource Include="BAImage.jpg" />
     <Resource Include="BirminghamImage.jpg" />
     <Resource Include="BirminghamImageLarger.jpg" />
     <Resource Include="BlurryBackground.jpg" />
+    <Resource Include="CSharpSDET.jpg" />
+    <Resource Include="DataAnalyst.jpg" />
+    <Resource Include="DataEngineer.jpg" />
     <Resource Include="LondonImage.jpg" />
     <Resource Include="partly_cloudy.png" />
     <Resource Include="SpartaLogo.png" />

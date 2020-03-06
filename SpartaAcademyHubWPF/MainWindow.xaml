@@ -140,7 +140,7 @@
     Width="46" />
             </Button>
             <TextBlock HorizontalAlignment="Left" Margin="568,574,0,0" Text="User Info" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="100" FontSize="24"/>
-            <TextBlock HorizontalAlignment="Left" Margin="738,574,0,0" Text="User Info" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="100" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="726,574,0,0" Text="Academies" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="124" FontSize="24"/>
             <TextBlock HorizontalAlignment="Center" Margin="0,574,0,0" Text="Courses" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="94" FontSize="24"/>
             <TextBlock HorizontalAlignment="Left" Margin="1062,574,0,0" Text="Connections" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="140" FontSize="24"/>
             <TextBlock HorizontalAlignment="Left" Margin="1270,574,0,0" Text="Calendar" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="98" FontSize="24"/>
