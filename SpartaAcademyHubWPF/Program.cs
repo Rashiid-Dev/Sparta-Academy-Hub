@@ -14,8 +14,6 @@ namespace SpartaAcademyHubWPF
 
             using (var db = new AcademyHubContext())
             {
-
-
                 var JoinQuery =
                 (from Courses in db.Courses.Include(o => o.Academy)
                  where Courses.Academy.Academyname == "Birmingham Academy"
@@ -24,6 +22,8 @@ namespace SpartaAcademyHubWPF
 
             }
         }
+
+        // Creates a list from all the academies in the database and returns it
         public List<string> AcadList = new List<string>();
         public List<string> AcademiesMake()
         {
@@ -42,17 +42,5 @@ namespace SpartaAcademyHubWPF
 
             }
         }
-
-        //public string AcademiesPrint()
-        //{
-        //    foreach (var acads in AcadList)
-        //    {
-        //        return acads;
-
-
-        //    }
-        //    return "";
-
-        //}
     }    
 }

@@ -43,7 +43,7 @@ namespace SpartaAcademyHubWPF
                  select account).ToList();
             }
                 
-                // Takes all the values from the textboxes and writes them to the database
+                // Takes all the values from the textboxes, creates an object out of them and writes it to the database
                 foreach (var logins in RegisterQuery)
                 {
                     if (userUsername == logins.UserName)
@@ -91,7 +91,6 @@ namespace SpartaAcademyHubWPF
                                 using (var db = new AcademyHubContext())
                                 {
                                     db.Accounts.Add(InsertRegData);
-                                    // executes the commands to implement the changes to the database
                                     db.SaveChanges();
                                     Window loginwindow = new Login();
                                     Window OpenRegisterWindow = new RegisterWindow();

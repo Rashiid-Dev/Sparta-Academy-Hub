@@ -35,13 +35,10 @@ namespace SpartaAcademyHubWPF
             mePlayer.Source = new Uri(@"C:\Users\TECH-W150birm\source\repos\SpartaAcademyHubWPFApp\SpartaAcademyHubWPF\Spartavid.mp4");
             mePlayer.Play();
             StartClock();
-
-
         }
 
         private void WelcomeButton_Click(object sender, RoutedEventArgs e)
         {
-
             WelcomeButton.Visibility = Visibility.Hidden;
             AcademyLogo.Visibility = Visibility.Hidden;
             Window LoginWindow = new Login();
@@ -70,6 +67,7 @@ namespace SpartaAcademyHubWPF
             timer.Start();
         }
 
+        // Creates a clock
         private void tickevent(object sender, EventArgs e)
         {
             DigitalClock.Text = DateTime.Now.ToString(@"hh\:mm");
@@ -94,11 +92,6 @@ namespace SpartaAcademyHubWPF
 
         private void Courses_Click(object sender, RoutedEventArgs e)
         {
- 
-            //foreach (var makr in p.CoursesPrint())
-            //{
-            
-            //}
             Window CourseWindow = new CoursesWindow();
             Window oldWindow = new MainWindow();
             oldWindow.Close();
@@ -110,28 +103,13 @@ namespace SpartaAcademyHubWPF
         {
             Window UserInfWindow = new UserInfoWindow();
             Window oldWindow = new MainWindow();
-            this.Close();
+            oldWindow.Close();
             UserInfWindow.Show();
-            //UserInfWindow.Owner = this;
+            UserInfWindow.Owner = this;
         }
 
         private void Academies_Click(object sender, RoutedEventArgs e)
         {
-        //    PrintInfo.Visibility = Visibility.Visible;
-        //    p.AcademiesMake();
-        //    var count = 0;
-        //    foreach (var makr in p.AcademiesMake())
-        //    {
-        //        PrintInfo.Text += makr + Environment.NewLine;
-        //        PrintInfo.Text += Environment.NewLine;
-        //        count++;
-        //    }
-        //    Dashboard.Visibility = Visibility.Hidden;
-        //    DigitalClock.Visibility = Visibility.Hidden;
-        //    PartlyCloudy.Visibility = Visibility.Hidden;
-        //    Weathertext.Visibility = Visibility.Hidden;
-        //    BackButton.Visibility = Visibility.Visible;
-
         Window AcadWindow = new Window1();
         Window oldWindow = new MainWindow();
             oldWindow.Close();

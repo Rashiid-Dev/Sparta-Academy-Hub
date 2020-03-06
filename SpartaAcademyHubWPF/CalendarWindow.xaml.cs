@@ -21,6 +21,7 @@ namespace SpartaAcademyHubWPF
         public CalendarWindow()
         {
             InitializeComponent();
+            // Query the courses with dates from the Courses table
             using (var db = new AcademyHubContext())
             {
                 var CalendarQuery =

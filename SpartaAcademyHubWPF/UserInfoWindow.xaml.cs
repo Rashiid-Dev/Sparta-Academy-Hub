@@ -17,7 +17,6 @@ namespace SpartaAcademyHubWPF
     /// </summary>
     public partial class UserInfoWindow : Window
     {
-        Login LW = new Login();
         public UserInfoWindow()
         {
             InitializeComponent();
@@ -27,16 +26,15 @@ namespace SpartaAcademyHubWPF
         private void BackToDashBoardButton(object sender, RoutedEventArgs e)
         {
             Window UserInfWindow = new UserInfoWindow();
-            Window oldWindow = new MainWindow();
+            Window oldWindow = new MainWindow();        
             this.Close();
-            //oldWindow.Show();
+
             ((MainWindow)this.Owner).LoginButtonClicked();
         }
 
         private void EditUserInfoButton(object sender, RoutedEventArgs e)
         {
-           // var UserName = LW.StoredUserName;
-           // UserInfoTextBlock.Text = UserName;
+
         }
     }
 }

@@ -18,24 +18,19 @@ namespace SpartaAcademyHubWPF
     /// </summary>
     public partial class Login : Window
     {
-        //public string selectedusername { get; set; }
-        //public string selecteduserpass { get; set; }
+        
         
         public Login()
         {
             InitializeComponent();
-            
-            
 
         }
-        //public string StoredUserName { get { return ReturnStoredName; } set { ReturnStoredName = value; } }
-        //public string ReturnStoredName;
+  
         private void LoginButton(object sender, RoutedEventArgs e)
         {
            
             var userLogin = UsernameText.Text;
             var userPassword = PasswordText.Password;
-            //StoredUserName = UsernameText.Text;
             using (var db = new AcademyHubContext())
             {
                 
@@ -58,6 +53,7 @@ namespace SpartaAcademyHubWPF
                     }
                     else
                     {
+                        // Writes to the textbox in the loginwindow when the password or username is wrong;
                         RightOrWrong.Text = "Wrong Username or/and Password";
                     }
                 }
