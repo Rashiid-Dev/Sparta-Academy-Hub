@@ -197,7 +197,7 @@ Utilising agile methodologies – scrum, stand-ups, user stories and working in 
                         Height="16"
                         HorizontalAlignment="Left">
                             <materialDesign:RatingBar
-                            Value="1"
+                            Value="4"
                             Orientation="Horizontal"
                             Foreground="Gold"
                             Margin="0" />
@@ -320,7 +320,7 @@ Utilising agile methodologies – scrum, stand-ups, user stories and working in 
                         Height="16"
                         HorizontalAlignment="Left">
                             <materialDesign:RatingBar
-                            Value="1"
+                            Value="4"
                             Orientation="Horizontal"
                             Foreground="Gold"
                             Margin="0" />
@@ -443,7 +443,7 @@ Utilising agile methodologies – scrum, stand-ups, user stories and working in 
                         Height="16"
                         HorizontalAlignment="Left">
                             <materialDesign:RatingBar
-                            Value="1"
+                            Value="4"
                             Orientation="Horizontal"
                             Foreground="Gold"
                             Margin="0" />
