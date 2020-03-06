@@ -8,7 +8,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"   
         
         mc:Ignorable="d"
-        Title="LoginWindow" Height="450" Width="380"
+        Title="LoginWindow" Height="650" Width="380"
         AllowsTransparency="True"
         Background="Transparent"
         WindowStyle="None"
@@ -57,15 +57,14 @@
                              FontFamily="Helvetica"
                             FontWeight="Light"
                             
-                            FontSize="20"
-                            HorizontalAlignment="Center"
+                            FontSize="36"
                             Foreground="White"
                             Background="Transparent"
                             BorderThickness="0"
                             Width="235"
                             HorizontalContentAlignment="Left"
                             Opacity="0.5"
-                            Height="25"
+                            Height="44"
                             Margin="63,0,0,0"/>
                     <materialDesign:PackIcon Kind="LockOutline"
                                                VerticalAlignment="Center"
@@ -80,19 +79,19 @@
 
 
                 <StackPanel Orientation="Horizontal" Margin="0,20,0,0">
-                    <TextBox x:Name="PasswordText" 
+                    <PasswordBox x:Name="PasswordText" 
                              FontFamily="Helvetica"
                             FontWeight="Light"
-                            Text="{Binding Path=selecteduserpass, Mode=TwoWay, UpdateSourceTrigger=LostFocus}"
-                            FontSize="20"
-                            HorizontalAlignment="Center"
+                            Password="Password"
+                             
+                            FontSize="24"
                             Foreground="White"
                             Background="Transparent"
                             BorderThickness="0"
                             Width="235"
                             HorizontalContentAlignment="Left"
                             Opacity="0.5"
-                            Height="25"
+                            Height="46"
                             Margin="63,0,0,0"/>
                     <materialDesign:PackIcon Kind="AccountArrowLeftOutline"
                                                VerticalAlignment="Center"

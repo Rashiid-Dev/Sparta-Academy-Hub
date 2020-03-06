@@ -163,7 +163,11 @@ namespace SpartaAcademyHubWPF
 
         private void People_Click(object sender, RoutedEventArgs e)
         {
-
+            Window PplWindow = new PeopleWindow();
+            Window oldWindow = new MainWindow();
+            oldWindow.Close();
+            PplWindow.Show();
+            PplWindow.Owner = this;
         }
     }
 }

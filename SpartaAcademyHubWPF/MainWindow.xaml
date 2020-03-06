@@ -64,7 +64,7 @@
         <Image x:Name="AcademyLogo" HorizontalAlignment="Left" Height="367" Margin="980,-46,0,0" VerticalAlignment="Top" Width="790" Source="AcademyHubLogo.png"/>
 
 
-        <TextBox x:Name="DigitalClock" HorizontalAlignment="Left" Margin="67,21,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Height="185" FontSize="72" FontFamily="Microsoft YaHei UI" Visibility="Hidden" Foreground="White">
+        <TextBox x:Name="DigitalClock" HorizontalAlignment="Left" Margin="67,21,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Height="185" FontSize="72" FontFamily="Microsoft YaHei UI" Visibility="Hidden" Foreground="White" SelectionBrush="{x:Null}" CaretBrush="{x:Null}">
             <TextBox.BorderBrush>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="Black"/>
@@ -139,6 +139,11 @@
     Height="45"
     Width="46" />
             </Button>
+            <TextBlock HorizontalAlignment="Left" Margin="568,574,0,0" Text="User Info" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="100" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="738,574,0,0" Text="User Info" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="100" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,574,0,0" Text="Courses" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="94" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1062,574,0,0" Text="Connections" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="140" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1270,574,0,0" Text="Calendar" TextWrapping="Wrap" VerticalAlignment="Top" Height="40" Width="98" FontSize="24"/>
         </Grid>
 
 

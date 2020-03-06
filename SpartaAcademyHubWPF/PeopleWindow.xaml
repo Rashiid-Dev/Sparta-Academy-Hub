@@ -1,0 +1,38 @@
+﻿<Window x:Class="SpartaAcademyHubWPF.PeopleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpartaAcademyHubWPF"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        Title="PeopleWindow"  Height="1080" Width="1920"
+        WindowStyle="None"
+        WindowState="Maximized">
+    <Grid>
+        <Image HorizontalAlignment="Center" Height="1064" VerticalAlignment="Center" Width="1920" Source="BlurryBackground.jpg" Stretch="Fill"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,101,0,0" Text="Your Connections" TextWrapping="Wrap" VerticalAlignment="Top" Height="97" Width="564" FontSize="72"/>
+
+
+
+        <ListBox x:Name="ListOfPeople"
+  IsEnabled="{Binding IsChecked, ElementName=EnableListBox}" Margin="496,274,444,62" FontSize="48">
+
+        </ListBox>
+
+        <Button x:Name="BackToDashBoardB"
+    Style="{StaticResource MaterialDesignRaisedDarkButton}"
+    ToolTip="Resource name: MaterialDesignRaisedLightDarkButton" Margin="56,71,1693,961" Content="Back to dashboard" Click="BackToDashBoardButton"/>
+
+        <Button x:Name="ShowConnections"
+    Style="{StaticResource MaterialDesignRaisedLightButton}"
+    ToolTip="Resource name: MaterialDesignRaisedLightButton" Margin="881,198,881,834" Content="Show Connections" Click="ShowConnections_Click"/>
+        <TextBlock x:Name="TestTextBox" HorizontalAlignment="Left" Margin="56,198,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Width="617" Height="738"/>
+
+
+    </Grid>
+
+
+</Window>
+    
+    

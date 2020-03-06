@@ -24,7 +24,7 @@ namespace SpartaAcademyHubWPF
         public Login()
         {
             InitializeComponent();
-            //MainWindow mainWindow = new MainWindow();
+            
             
 
         }
@@ -33,21 +33,18 @@ namespace SpartaAcademyHubWPF
         {
            
             var userLogin = UsernameText.Text;
-            var userPassword = PasswordText.Text;
+            var userPassword = PasswordText.Password;
 
             using (var db = new AcademyHubContext())
             {
                 
 
                 var LoginQuery =
-                //from order in db.Orders.Include(o => o.Customer)
-                //where order.Freight > 750
-                //select order;
                 from account in db.Accounts
                 where account.UserName == userLogin
                 where account.UserPass == userPassword
                 select account;
-                //if(selectedusername ==)
+               
                 foreach (var logins in LoginQuery)
                 {
                     if (userLogin == logins.UserName && userPassword == logins.UserPass)
@@ -55,7 +52,7 @@ namespace SpartaAcademyHubWPF
                         MainWindow oldwindow = new MainWindow();
                         Login LoginWindow = new Login();
                         this.Close();
-                        //oldwindow.LoginButtonClicked();
+                        
                         ((MainWindow)this.Owner).LoginButtonClicked();
                     }
                     else
@@ -73,7 +70,23 @@ namespace SpartaAcademyHubWPF
 
         private void RegisterButton(object sender, RoutedEventArgs e)
         {
+            Window OpenRegisterwindow = new RegisterWindow();
+            OpenRegisterwindow.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            Login LoginWindow = new Login();
 
+            this.Hide();
+            OpenRegisterwindow.Show();
+            OpenRegisterwindow.Owner = this;
+
+
+            
+
+        }
+
+        public void CloseRegister()
+        {
+            MainWindow oldwindow = new MainWindow();
+           ((MainWindow)this.Owner).LoginButtonClicked();
         }
     }
 }
